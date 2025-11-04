@@ -9,7 +9,7 @@ export default function Contact() {
             Contact
           </h2>
           <p className="mt-2 text-sm text-white/70">
-            Feel free to reach out for collaboration, internships, or a chat.
+            Reach out for collaborations, internships, or robotics chat.
           </p>
         </div>
         <div className="md:col-span-2">
@@ -18,7 +18,7 @@ export default function Contact() {
               href="mailto:your.email@example.com"
               className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 hover:bg-white/10"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-400/15 text-cyan-200">
                 <Mail className="h-5 w-5" />
               </div>
               <div>
@@ -33,7 +33,7 @@ export default function Contact() {
               rel="noreferrer"
               className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 hover:bg-white/10"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-400/15 text-cyan-200">
                 <Linkedin className="h-5 w-5" />
               </div>
               <div>
@@ -46,7 +46,7 @@ export default function Contact() {
               href="tel:+1234567890"
               className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 hover:bg-white/10"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-400/15 text-cyan-200">
                 <Phone className="h-5 w-5" />
               </div>
               <div>

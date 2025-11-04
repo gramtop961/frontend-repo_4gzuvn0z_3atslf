@@ -7,7 +7,7 @@ function Input({ label, ...props }) {
       <span className="mb-1 block text-white/80">{label}</span>
       <input
         {...props}
-        className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 outline-none ring-0 focus:border-white/20"
+        className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 outline-none ring-0 focus:border-cyan-400/40"
       />
     </label>
   );
@@ -19,7 +19,7 @@ function TextArea({ label, ...props }) {
       <span className="mb-1 block text-white/80">{label}</span>
       <textarea
         {...props}
-        className="min-h-[96px] w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 outline-none ring-0 focus:border-white/20"
+        className="min-h-[96px] w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 outline-none ring-0 focus:border-cyan-400/40"
       />
     </label>
   );
@@ -78,7 +78,7 @@ export default function Portfolio() {
             Portfolio
           </h2>
           <p className="mt-2 text-sm text-white/70">
-            Add projects you’re proud of. You can edit the list anytime.
+            Log your builds and experiments. Your list saves in the browser.
           </p>
         </div>
         <div className="md:col-span-2">
@@ -86,7 +86,7 @@ export default function Portfolio() {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <Input
                 label="Title"
-                placeholder="e.g., House Price Prediction"
+                placeholder="e.g., Servo Arm Kinematics"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
@@ -100,14 +100,14 @@ export default function Portfolio() {
             <div className="mt-4">
               <TextArea
                 label="Short Description"
-                placeholder="What did you build? What techniques did you use?"
+                placeholder="What did you build? Sensors, control, perception, UI?"
                 value={desc}
                 onChange={(e) => setDesc(e.target.value)}
               />
             </div>
             <button
               type="submit"
-              className="mt-4 inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/20 px-4 py-2 text-emerald-200 hover:bg-emerald-500/30"
+              className="mt-4 inline-flex items-center gap-2 rounded-lg border border-cyan-500/30 bg-cyan-500/20 px-4 py-2 text-cyan-100 hover:bg-cyan-500/30"
             >
               <Plus className="h-4 w-4" /> Add Project
             </button>
@@ -140,7 +140,7 @@ export default function Portfolio() {
                       href={item.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-emerald-300 hover:text-emerald-200"
+                      className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200"
                     >
                       <ExternalLink className="h-4 w-4" /> View
                     </a>
