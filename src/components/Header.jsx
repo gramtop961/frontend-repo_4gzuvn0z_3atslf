@@ -4,15 +4,15 @@ import Spline from "@splinetool/react-spline";
 export default function Header() {
   return (
     <header className="relative w-full text-white">
-      {/* Spline cyberpunk cover */}
+      {/* Spline space/galaxy cover */}
       <div className="relative h-[70vh] w-full overflow-hidden">
         <Spline
-          scene="https://prod.spline.design/BL9Cjn3fkAdLBhXm/scene.splinecode"
+          scene="https://prod.spline.design/er66D6jbuo0hIjmn/scene.splinecode"
           style={{ width: "100%", height: "100%" }}
         />
-        {/* subtle gradient overlays to improve text contrast */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/30 to-slate-950/70" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.12),transparent_60%)]" />
+        {/* gradient overlays to improve text contrast without blocking interaction */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.16),transparent_60%)]" />
 
         {/* Hero content */}
         <div className="absolute inset-0 z-10">
@@ -25,8 +25,8 @@ export default function Header() {
                 <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
                   Your Name
                 </h1>
-                <p className="mt-1 text-sm text-emerald-200/80">
-                  Exploring AI • Machine Learning • Future Systems
+                <p className="mt-1 text-sm text-violet-200/80">
+                  Exploring AI • Machine Learning • Cosmic Interfaces
                 </p>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function Header() {
       </div>
 
       {/* Divider to transition into content */}
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-violet-400/40 to-transparent" />
     </header>
   );
 }
