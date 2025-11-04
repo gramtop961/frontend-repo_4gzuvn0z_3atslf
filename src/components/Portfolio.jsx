@@ -4,10 +4,10 @@ import { ExternalLink, Plus, Trash2 } from "lucide-react";
 function Input({ label, ...props }) {
   return (
     <label className="block text-sm">
-      <span className="mb-1 block text-white/80">{label}</span>
+      <span className="mb-1 block text-slate-700">{label}</span>
       <input
         {...props}
-        className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 outline-none ring-0 focus:border-cyan-400/40"
+        className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 placeholder-slate-400 outline-none ring-0 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200"
       />
     </label>
   );
@@ -16,10 +16,10 @@ function Input({ label, ...props }) {
 function TextArea({ label, ...props }) {
   return (
     <label className="block text-sm">
-      <span className="mb-1 block text-white/80">{label}</span>
+      <span className="mb-1 block text-slate-700">{label}</span>
       <textarea
         {...props}
-        className="min-h-[96px] w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white placeholder-white/40 outline-none ring-0 focus:border-cyan-400/40"
+        className="min-h-[96px] w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 placeholder-slate-400 outline-none ring-0 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200"
       />
     </label>
   );
@@ -71,18 +71,18 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="portfolio" className="mx-auto max-w-6xl px-4 py-12 text-white md:py-16">
+    <section id="portfolio" className="mx-auto max-w-6xl bg-white px-4 py-12 text-slate-900 md:py-16">
       <div className="grid gap-8 md:grid-cols-3">
         <div className="md:col-span-1">
           <h2 className="text-xl font-semibold tracking-tight md:text-2xl">
             Portfolio
           </h2>
-          <p className="mt-2 text-sm text-white/70">
+          <p className="mt-2 text-sm text-slate-600">
             Log your builds and experiments. Your list saves in the browser.
           </p>
         </div>
         <div className="md:col-span-2">
-          <form onSubmit={addItem} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <form onSubmit={addItem} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <Input
                 label="Title"
@@ -107,7 +107,7 @@ export default function Portfolio() {
             </div>
             <button
               type="submit"
-              className="mt-4 inline-flex items-center gap-2 rounded-lg border border-cyan-500/30 bg-cyan-500/20 px-4 py-2 text-cyan-100 hover:bg-cyan-500/30"
+              className="mt-4 inline-flex items-center gap-2 rounded-lg border border-cyan-300 bg-cyan-50 px-4 py-2 text-cyan-700 hover:bg-cyan-100"
             >
               <Plus className="h-4 w-4" /> Add Project
             </button>
@@ -115,21 +115,21 @@ export default function Portfolio() {
 
           <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
             {items.length === 0 && (
-              <div className="col-span-full rounded-xl border border-white/10 bg-white/5 p-6 text-white/70">
+              <div className="col-span-full rounded-xl border border-slate-200 bg-white p-6 text-slate-600 shadow-sm">
                 No projects yet. Add your first above!
               </div>
             )}
             {items.map((item) => (
               <article
                 key={item.id}
-                className="group flex flex-col justify-between rounded-xl border border-white/10 bg-gradient-to-b from-slate-800/40 to-slate-900/60 p-5"
+                className="group flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
               >
                 <div>
                   <h3 className="text-lg font-semibold tracking-tight">
                     {item.title}
                   </h3>
                   {item.desc && (
-                    <p className="mt-2 text-sm leading-relaxed text-white/80">
+                    <p className="mt-2 text-sm leading-relaxed text-slate-700">
                       {item.desc}
                     </p>
                   )}
@@ -140,16 +140,16 @@ export default function Portfolio() {
                       href={item.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200"
+                      className="inline-flex items-center gap-2 text-cyan-700 hover:text-cyan-800"
                     >
                       <ExternalLink className="h-4 w-4" /> View
                     </a>
                   ) : (
-                    <span className="text-sm text-white/50">No link</span>
+                    <span className="text-sm text-slate-500">No link</span>
                   )}
                   <button
                     onClick={() => removeItem(item.id)}
-                    className="inline-flex items-center gap-2 rounded-md border border-red-500/30 bg-red-500/10 px-3 py-1.5 text-red-200 hover:bg-red-500/20"
+                    className="inline-flex items-center gap-2 rounded-md border border-red-300 bg-red-50 px-3 py-1.5 text-red-700 hover:bg-red-100"
                   >
                     <Trash2 className="h-4 w-4" /> Delete
                   </button>
